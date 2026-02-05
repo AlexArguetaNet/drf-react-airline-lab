@@ -8,7 +8,6 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from .serializers import UserSerializer
 
-
 # View to register a new user
 class RegisterView(APIView):
     permission_classes = [AllowAny]
@@ -55,7 +54,7 @@ class RefreshTokenView(TokenRefreshView):
     def post(self, request, *args, **kwargs):
 
         # Get the refresh token from the cookie
-        refresh_token_value = request.COOKIES.get("refresh+token")
+        refresh_token_value = request.COOKIES.get("refresh_token")
         if refresh_token_value:
             request.data["refresh"] = refresh_token_value
 
@@ -70,4 +69,28 @@ class RefreshTokenView(TokenRefreshView):
 class UserInfoView(APIView):
     permission_classes = [IsAuthenticated]
 
-    #TODO: IMplement post function
+    def get(self, request):
+        curr_user = request.user
+        return Response({
+            "username": curr_user.username,
+            "email": curr_user.email
+        })
+    
+# View to handle logout request
+class LogoutView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        refresh_token_value = request.COOKIES.get("refresh_token")
+        if refresh_token_value:
+            try:
+                token = RefreshToken(refresh_token_value)
+                token.blacklist()
+            except TokenError:
+                pass
+
+        res = Response({"msg": "Logged out"}, status=status.HTTP_205_RESET_CONTENT)
+
+        res.delete_cookie("refresh_token")
+
+        return res
