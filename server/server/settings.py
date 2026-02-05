@@ -35,7 +35,7 @@ ALLOWED_HOSTS = os.getenv("AllOWED_HOSTS").split(",")
 
 # Application definition
 
-AUTH_CUSTOM_USER = "users.CustomUser"
+AUTH_USER_MODEL = "users.CustomUser"
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
