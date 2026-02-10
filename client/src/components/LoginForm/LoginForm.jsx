@@ -3,9 +3,7 @@ import "./LoginForm.css"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-export const LoginForm = ({ handleLogin, setIsLoginForm }) => {
-
-  // TODO: Implement function to handle login request in utils.js
+export const LoginForm = ({ handleLogin, setIsLoginForm, message }) => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -25,6 +23,7 @@ export const LoginForm = ({ handleLogin, setIsLoginForm }) => {
     <>
       <Form title={"Welcome Back"}>
 
+        {message}
         <div className="text-input-container">
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" required />
         </div>
@@ -32,7 +31,7 @@ export const LoginForm = ({ handleLogin, setIsLoginForm }) => {
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
         </div>
         
-        <button onClick={handleSubmit} className="button-submit">Login</button>
+        <input type="submit" className="button-submit" value="Login" />
       </Form>
       <div id="form-switch-container">
         <p>

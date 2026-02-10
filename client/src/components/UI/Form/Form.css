@@ -2,6 +2,7 @@
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 10px;
 }
 
@@ -17,15 +18,18 @@ form .text-input-container {
   padding: 5px;
   border: 2px solid rgb(228, 228, 228);
   border-radius: 5px;
+  width: 170px;
 }
 
-.button-submit {
+form input[type=submit] {
   background-color: rgb(255, 156, 98);
   border-radius: 5px;
   width: 150px;
   margin: 10px auto;
   padding: 10px 0px;
   color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
 
 form h2 {
@@ -41,4 +45,16 @@ form h2 {
 #form-switch-container span {
     color: rgb(255, 156, 98);
     cursor: pointer;
+}
+
+.form-message {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-message.error {
+  color: red;
+}
+.form-message.success {
+  color: rgb(0, 155, 0);
 }

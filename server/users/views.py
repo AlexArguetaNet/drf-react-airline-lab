@@ -18,7 +18,7 @@ class RegisterView(APIView):
             serialized_user.save()
             return Response(serialized_user.data, status=status.HTTP_201_CREATED)
         else:
-            return Response({"err": f"DRF: {serialized_user.errors}"}, status=status.HTTP_400_BAD_REQUEST)
+            return Response(serialized_user.errors, status=status.HTTP_400_BAD_REQUEST)
 
 # View to handle login request
 class LoginView(TokenObtainPairView):

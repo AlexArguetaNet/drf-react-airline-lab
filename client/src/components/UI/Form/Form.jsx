@@ -1,9 +1,9 @@
 import "./Form.css"
 
-function Form({ title, children }) {
+function Form({ title, onSubmit, children }) {
 
   return (
-    <form>
+    <form onSubmit={onSubmit}>
         <h2>{title}</h2>
         {children}
     </form>
