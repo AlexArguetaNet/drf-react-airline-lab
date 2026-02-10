@@ -4,31 +4,17 @@
   font-family: "Nunito";
 }
 
-a { text-decoration: none; }
-button { cursor: pointer; }
+body {
+  background-color: rgb(235, 235, 235);
+}
 
-nav {
-  background-color: rgb(203, 255, 203);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-}
-nav a { 
-  color: black; 
-  margin-left: 10px;
-}
+a { text-decoration: none; }
+button { cursor: pointer; border: none; }
+input { outline: none;}
 
 .main {
   width: 55%;
   max-width: 550px;
   margin: 30px auto;
-}
-
-form {
-  background-color: rgb(231, 231, 255);
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
 }
 
