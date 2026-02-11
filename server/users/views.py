@@ -38,7 +38,7 @@ class LoginView(TokenObtainPairView):
                 key="refresh_token",
                 value=refresh_token_value,
                 httponly=True,
-                secure=True
+                secure=True,
             )
 
             return res
@@ -78,7 +78,7 @@ class UserInfoView(APIView):
     
 # View to handle logout request
 class LogoutView(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
 
     def post(self, request):
         refresh_token_value = request.COOKIES.get("refresh_token")

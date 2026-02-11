@@ -1,27 +1,23 @@
 import Form from "../UI/Form/Form"
 import "./LoginForm.css"
 import { useState } from "react"
-import { Link } from "react-router-dom"
 
 export const LoginForm = ({ handleLogin, setIsLoginForm, message }) => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     handleLogin(username, password);
 
     setUsername("");
     setPassword("");
   }
 
-  const handleFormSwitch = () => {
-
-  }
-
   return (
     <>
-      <Form title={"Welcome Back"}>
+      <Form title={"Welcome Back"} onSubmit={handleSubmit}>
 
         {message}
         <div className="text-input-container">
