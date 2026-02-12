@@ -56,6 +56,7 @@ SIMPLE_JWT = {
 INSTALLED_APPS = [
 
     "users",
+    "flights",
     "rest_framework",
     "rest_framework_simplejwt.token_blacklist",
     "corsheaders",
