@@ -26,7 +26,7 @@ export const registerUser = async (userData) => {
             return {"err": errMsg};
         }
 
-        console.log(`Network err: ${err.message}`);
+        console.log(`Network err: ${err.message}. Make sure .env exists`);
         return {"err": `Network error or server is down`};
     }
 }

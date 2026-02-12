@@ -2,29 +2,43 @@ import { Link } from "react-router-dom"
 import "./Navbar.css"
 import { useAuth } from "../../context/AuthContext"
 import { logout } from "../../utils/authAPI";
+import DropDownMenu from "../DropDownMenu/DropDownMenu";
 
 function Navbar() {
 
   const { user } = useAuth();
 
-  // TODO: Create UI to logout a user
-
-  // Logging out is handled here temporarily 
+  // Function to logout a user
   const handleLogout = async () => {
     await logout();
     window.location.reload();
   }
 
+  const menuOptions = [
+    <Link to={"/profile"}>Profile</Link>,
+    <Link onClick={handleLogout}>Logout</Link>
+  ]
+
   return (
     <nav>
-      <div className="links">
+      <div className="content">
         <Link to={"/"}><h2>Airline API</h2></Link>
-        <div>
-          <Link to={"/about"}>About</Link>
+        <div className="links">
+          <div>
+            <Link to={"/about"}>About</Link>
+          </div>
           {
-            user ? (<button className="login-link" onClick={handleLogout}>{user.username}</button>)
+            user ? (
+                      <div>
+                        <DropDownMenu title={user.username} options={menuOptions} />
+                      </div>
+                   )
                   :
-                  (<Link to={"/login"} className="login-link">Login</Link>)
+                  (
+                    <div>
+                      <Link to={"/login"} className="login-link">Login</Link>
+                    </div>
+                  )
           }
         </div>
       </div>

@@ -3,7 +3,7 @@ nav {
     background-color: #ffffff;
 }
 
-nav .links {
+nav .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,12 +12,16 @@ nav .links {
     margin: 0px auto;
 }
 
-nav a {
-    color: #000000;
+nav .links {
+    display: flex;
+    align-items: center;
+}
+nav .links > div {
+    margin-left: 30px;
 }
 
-nav .links div a {
-    margin-left: 20px;
+nav a {
+    color: #000000;
 }
 
 .login-link {

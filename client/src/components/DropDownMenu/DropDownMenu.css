@@ -1,0 +1,49 @@
+
+.dropdown-menu {
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.dropdown-menu-button {
+    cursor: pointer;
+    z-index: 9;
+    background-color: rgb(255, 148, 109);
+    color: white;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.menu-options-container {
+    width: 130px; /* Change the width of the menu */
+    position: absolute;
+    z-index: 1000;
+    padding-top: 30px; /* Chane how far down the menu goes */
+    border-radius: 5px;
+    z-index: 9;
+}
+
+.options-container {
+    background-color: #ffffff;
+    border: 2px solid gray;
+    border-radius: 3px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.options-container a {
+    display: block; /* Change to block to modify the width */
+    width: 100%; /* Have width take up the entire menu width */
+}
+
+.options-container div:first-child {
+    border-bottom: 1px solid gray;
+}
+
+.options-container a:hover {
+    background-color: rgb(226, 226, 226);
+}
