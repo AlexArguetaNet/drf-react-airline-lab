@@ -17,7 +17,7 @@ function DropDownMenu({ title, options }) {
                     <div className="menu-options-container">
                         <div className="options-container">
                             {options.map((option, index) => (
-                                    <div className="option-container">
+                                    <div className="option-container" key={index}>
                                         {option}
                                     </div>
                                 ))

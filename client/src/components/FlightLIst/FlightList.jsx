@@ -9,7 +9,7 @@ function FlightList({ flights }) {
                 flights.length > 0 ? flights.map((flight, index) => (
                     <FlightListItem flight={flight} key={index} />
                 )) : (
-                    <p>Loading...</p>
+                    <p></p>
                 )
             }
         </div>

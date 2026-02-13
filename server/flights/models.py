@@ -16,6 +16,7 @@ class Flight(models.Model):
     destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name="arrivals")
     duration = models.IntegerField()
     passengers = models.ManyToManyField(User, blank=True, related_name="flights")
+    price = models.IntegerField()
 
     def __str__(self):
         return f"Flight from {self.origin} to {self.destination}"

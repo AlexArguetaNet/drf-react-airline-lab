@@ -5,7 +5,7 @@ class AirportAdmin(admin.ModelAdmin):
     list_display = ("id", "code", "city")
 
 class FlightAdmin(admin.ModelAdmin):
-    list_display = ("id", "origin", "destination", "duration")
+    list_display = ("id", "origin", "destination", "price","duration")
 
 # Register your models here.
 admin.site.register(Airport, AirportAdmin)

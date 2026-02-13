@@ -19,7 +19,10 @@ function Home() {
 
     return (
         <Page secondClassName={"home-page"}>
-            <FlightList flights={flights} />
+            {
+                flights ?  <FlightList flights={flights} />
+                        : <p>No flights</p>
+            }
         </Page>
     )
 }
