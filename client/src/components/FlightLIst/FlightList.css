@@ -1,0 +1,41 @@
+
+.flight-list-container {
+    margin: 20px;
+}
+
+.flight-list-item {
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.flight-list-item div {
+    margin: 0px 10px;
+}
+
+.flight-list-item svg {
+    width: 35px;
+    height: 35px;
+}
+
+.flight-list-item #number, .flight-list-item #price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flight-list-item #graphic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 290px;
+}
+
+.flight-list-item #graphic #plane {
+    width: 25px;
+    height: 25px;
+}

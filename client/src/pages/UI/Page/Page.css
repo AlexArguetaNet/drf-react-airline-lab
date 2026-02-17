@@ -6,4 +6,5 @@
   background-color: rgb(252, 252, 252);
   border-radius: 8px;
   min-height: 80vh;
+  min-width: 580px;
 }

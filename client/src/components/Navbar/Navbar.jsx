@@ -3,6 +3,7 @@ import "./Navbar.css"
 import { useAuth } from "../../context/AuthContext"
 import { logout } from "../../utils/authAPI";
 import DropDownMenu from "../DropDownMenu/DropDownMenu";
+import { FaPaperPlane } from "react-icons/fa"
 
 function Navbar() {
 
@@ -22,7 +23,7 @@ function Navbar() {
   return (
     <nav>
       <div className="content">
-        <Link to={"/"}><h2>Airline API</h2></Link>
+        <Link to={"/"}><h2><FaPaperPlane /> Airline API</h2></Link>
         <div className="links">
           <div>
             <Link to={"/about"}>About</Link>
