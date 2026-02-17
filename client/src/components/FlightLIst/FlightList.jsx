@@ -24,18 +24,20 @@ function FlightListItem({ flight }) {
 
     return (
         <div className="flight-list-item">
-            <div id="number">
+            <div id="number-container">
                 <MdAirplaneTicket />
-                <h3>Flight {flight.id}</h3>
+                <h3 id="number">FLIGHT {flight.id}</h3>
             </div>
-            <div id="graphic">
+            <div id="graphic-container">
                 <p>{flight.origin.code}</p>
-                <GoHorizontalRule /> <MdOutlineAirplanemodeActive id="plane" /> <GoHorizontalRule />
+                <GoHorizontalRule id="line" /> 
+                <MdOutlineAirplanemodeActive id="plane" /> 
+                <GoHorizontalRule id="line" />
                 <p>{flight.destination.code}</p>
             </div>
-            <div id="price">
-                <h2>${flight.price}</h2>
-                <Link>Details</Link>
+            <div id="price-container">
+                <p id="price">${flight.price}</p>
+                <Link id="details-link">Details</Link>
             </div>
         </div>
     )

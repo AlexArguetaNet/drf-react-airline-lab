@@ -4,13 +4,13 @@
 }
 
 .flight-list-item {
-    border: 2px solid gray;
-    border-radius: 10px;
-    margin: 20px 0px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 25px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
+    padding: 20px 0px;
 }
 
 .flight-list-item div {
@@ -22,20 +22,58 @@
     height: 35px;
 }
 
-.flight-list-item #number, .flight-list-item #price {
+.flight-list-item #number-container, .flight-list-item #price-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 200px;
 }
 
-.flight-list-item #graphic {
+.flight-list-item #number-container svg {
+    width: 45px;
+    height: 45px;
+    color: rgb(32, 32, 117);
+}
+
+.flight-list-item #number {
+    color: rgb(155, 155, 155);
+}
+
+.flight-list-item #graphic-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 290px;
+    justify-content: space-evenly;
+    width: 250px;
 }
 
-.flight-list-item #graphic #plane {
+.flight-list-item #graphic-container p {
+    font-weight: bold;
+}
+
+.flight-list-item #graphic-container #plane {
     width: 25px;
     height: 25px;
+    color: rgb(123, 133, 165);
+}
+
+.flight-list-item #graphic-container #line {
+    color: rgb(168, 168, 168);
+}
+
+.flight-list-item #price {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.flight-list-container #details-link {
+  background-color: rgb(255, 156, 98);
+  color: #ffffff;
+  width: 80px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 3px 0px;
+}
+
+#details-link, .flight-list-item #number {
+    margin-top: 10px;
 }
