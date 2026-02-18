@@ -47,7 +47,7 @@ function FlightListItem({ flight }) {
                     <p>{flight.duration}</p>
                 </div>
                 <div id="details-link">
-                    <Link>Details</Link>
+                    <Link to={`/flights/${flight.id}`} state={{ flightData: flight }} >Details</Link>
                 </div>
             </div>
         </div>

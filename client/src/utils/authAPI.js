@@ -49,6 +49,7 @@ export const refreshToken = async () => {
             console.log("No active session found");
         } else {
             console.log("Server error");
+            alert("Seeing this alert means that the server is most likely down. Things might not work as expected on this website. Please wait until the server is running again. Thank you.")
         }
 
         return null; // Cookie with refresh token doesn't exist or expired

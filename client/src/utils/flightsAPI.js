@@ -19,3 +19,25 @@ export const fetchFlights = async () => {
     }
 
 }
+
+export const fetchSingleFlight = async (flightId) => {
+
+    try {
+
+        const res = await axios.get(`${API_PREFIX}/api/flights/${flightId}`);
+
+        console.log(res.data);
+
+        return res.data;
+        
+    } catch (err) {
+        
+        if (err.response) {
+            console.log(`Err: ${err.response.status}`);
+        }
+
+        return null;
+
+    }
+
+}
