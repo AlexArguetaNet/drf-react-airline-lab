@@ -5,75 +5,79 @@
 
 .flight-list-item {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 15px;
     margin: 25px 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0px;
-}
-
-.flight-list-item div {
-    margin: 0px 10px;
-}
-
-.flight-list-item svg {
-    width: 35px;
-    height: 35px;
-}
-
-.flight-list-item #number-container, .flight-list-item #price-container {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 200px;
+    padding: 17px 0px;
 }
 
-.flight-list-item #number-container svg {
+.flight-list-item .row {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.flight-list-item .row:first-child {
+    margin-bottom: 7px;
+}
+
+.flight-list-item #graphic {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.flight-list-item .row > div {
+    width: 34%;
+}
+
+.flight-list-item .row .middle {
+    width: 300px;
+}
+
+.flight-list-item #ticket-icon {
     width: 45px;
     height: 45px;
-    color: rgb(32, 32, 117);
+    color: rgb(59, 50, 85);
+}
+
+.flight-list-item .row .line {
+    font-size: 50px;
+    color: rgb(201, 201, 201);
+}
+
+.flight-list-item #airplane-icon {
+    width: 30px;
+    height: 30px;
+    color: rgb(111, 111, 146);
+}
+
+.flight-list-item #details-link a {
+    background-color: rgb(255, 123, 46);
+    color: #ffffff;
+    padding: 5px 20px;
+    border-radius: 20px;
 }
 
 .flight-list-item #number {
-    color: rgb(155, 155, 155);
+    font-size: 19px;
+    color: gray;
 }
 
-.flight-list-item #graphic-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 250px;
+.flight-list-item #duration p {
+    width: fit-content;
+    background-color: rgb(231, 230, 245);
+    color: rgb(87, 87, 87);
+    margin: 0px auto;
+    padding: 0px 5px;
+    border-radius: 8px;
 }
 
-.flight-list-item #graphic-container p {
+.flight-list-item #price p {
     font-weight: bold;
-}
-
-.flight-list-item #graphic-container #plane {
-    width: 25px;
-    height: 25px;
-    color: rgb(123, 133, 165);
-}
-
-.flight-list-item #graphic-container #line {
-    color: rgb(168, 168, 168);
-}
-
-.flight-list-item #price {
     font-size: 25px;
-    font-weight: bold;
 }
 
-.flight-list-container #details-link {
-  background-color: rgb(255, 156, 98);
-  color: #ffffff;
-  width: 80px;
-  text-align: center;
-  border-radius: 8px;
-  padding: 3px 0px;
-}
-
-#details-link, .flight-list-item #number {
-    margin-top: 10px;
-}

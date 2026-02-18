@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 import "./Navbar.css"
 import { useAuth } from "../../context/AuthContext"
-import { logout } from "../../utils/authAPI";
-import DropDownMenu from "../DropDownMenu/DropDownMenu";
-import { FaPaperPlane } from "react-icons/fa"
+import { logout } from "../../utils/authAPI"
+import DropDownMenu from "../DropDownMenu/DropDownMenu"
+import { SiFlyway } from "react-icons/si"
 
 function Navbar() {
 
@@ -23,7 +23,7 @@ function Navbar() {
   return (
     <nav>
       <div className="content">
-        <Link to={"/"}><h2><FaPaperPlane /> Airline API</h2></Link>
+        <Link to={"/"}><h2><SiFlyway /> Airline API</h2></Link>
         <div className="links">
           <div>
             <Link to={"/about"}>About</Link>

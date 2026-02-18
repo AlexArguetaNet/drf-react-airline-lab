@@ -1,6 +1,7 @@
 
 .login-page {
     display: flex;
+    padding: 0px;
 }
 
 .login-page > div {
