@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Form from "../UI/Form/Form"
+import Button from "../Button/Button";
 
 export const RegisterForm = ({ handleRegister, setIsLoginForm, message }) => {
 
@@ -31,7 +32,9 @@ export const RegisterForm = ({ handleRegister, setIsLoginForm, message }) => {
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
                 </div>
 
-                <input type="submit" className="button-submit" value="Create Account" />
+                <Button>
+                    <input type="submit" className="button-submit" value="Create Account" />
+                </Button>
 
             </Form>
             <div id="form-switch-container">

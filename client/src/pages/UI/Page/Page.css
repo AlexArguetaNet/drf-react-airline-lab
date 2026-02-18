@@ -1,12 +1,12 @@
 
 .page {
-  width: 80%;
+  width: 90%;
   max-width: 720px;
   margin: 30px auto;
   background-color: rgb(252, 252, 252);
   border-radius: 8px;
   min-height: 80vh;
-  min-width: 580px;
+  min-width: 680px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-  padding: 20px 0px;
+  padding: 20px;
 }

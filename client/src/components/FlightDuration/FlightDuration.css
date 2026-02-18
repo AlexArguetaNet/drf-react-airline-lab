@@ -1,0 +1,9 @@
+
+#duration p {
+    width: fit-content;
+    background-color: rgb(231, 230, 245);
+    color: rgb(87, 87, 87);
+    margin: 0px auto;
+    padding: 0px 5px;
+    border-radius: 8px;
+}

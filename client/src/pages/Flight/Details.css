@@ -1,0 +1,42 @@
+
+.flight-page #flight-details h2 {
+    color: var(--primary-color);
+    font-size: 35px;
+}
+
+.flight-page #flight-details #info > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flight-page #flight-details #graphic {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.flight-page #flight-details hr {
+    width: 100%;
+    color: rgb(201, 201, 201);
+}
+
+.flight-page #flight-details .circle-icon {
+    font-size: 55px;
+    stroke-width: 25px;
+    color: var(--primary-color);
+}
+
+.flight-page #flight-details #airplane-icon {
+    font-size: 70px;
+    margin: 0px 5px;
+    color: rgb(111, 111, 146);
+}
+
+.flight-page #flight-details b {
+    font-size: 18px;
+}
+
+.flight-page #flight-details #cities p {
+    color: gray;
+    font-size: 17px;
+}

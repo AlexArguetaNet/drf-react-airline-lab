@@ -1,7 +1,9 @@
+import "./Flight.css"
 import { useEffect, useState } from "react";
 import Page from "../UI/Page/Page"
 import { useParams, useLocation } from "react-router-dom"
 import { fetchSingleFlight } from "../../utils/flightsAPI";
+import Details from "./Details";
 
 function Flight() {
 
@@ -28,7 +30,10 @@ function Flight() {
             {/* Render page when flight data is available */}
             { 
                 flight && (
-                    <h1>Flight {flight.id}</h1>
+                    <div className="content">
+                        <Details flight={flight} />
+                        {/* TODO: Create Price component */}
+                    </div>
                 )
             }
         </Page>

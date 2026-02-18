@@ -1,8 +1,4 @@
 
-.flight-list-container {
-    margin: 20px;
-}
-
 .flight-list-item {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
@@ -41,7 +37,7 @@
 .flight-list-item #ticket-icon {
     width: 45px;
     height: 45px;
-    color: rgb(59, 50, 85);
+    color: var(--primary-color);
 }
 
 .flight-list-item .row .line {
@@ -65,15 +61,6 @@
 .flight-list-item #number {
     font-size: 19px;
     color: gray;
-}
-
-.flight-list-item #duration p {
-    width: fit-content;
-    background-color: rgb(231, 230, 245);
-    color: rgb(87, 87, 87);
-    margin: 0px auto;
-    padding: 0px 5px;
-    border-radius: 8px;
 }
 
 .flight-list-item #price p {

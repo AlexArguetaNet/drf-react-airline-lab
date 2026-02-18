@@ -1,6 +1,7 @@
 import Form from "../UI/Form/Form"
 import "./LoginForm.css"
 import { useState } from "react"
+import Button from "../Button/Button"
 
 export const LoginForm = ({ handleLogin, setIsLoginForm, message }) => {
 
@@ -27,7 +28,9 @@ export const LoginForm = ({ handleLogin, setIsLoginForm, message }) => {
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
         </div>
         
-        <input type="submit" className="button-submit" value="Login" />
+        <Button>
+          <input type="submit" className="button-submit" value="Login" />
+        </Button>
       </Form>
       <div id="form-switch-container">
         <p>

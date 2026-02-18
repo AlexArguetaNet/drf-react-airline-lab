@@ -3,6 +3,8 @@ import { MdAirplaneTicket } from "react-icons/md"
 import { GoHorizontalRule } from "react-icons/go"
 import { MdOutlineAirplanemodeActive } from "react-icons/md"
 import { Link } from "react-router-dom"
+import FlightDuration from "../FlightDuration/FlightDuration"
+import Button from "../Button/Button"
 
 function FlightList({ flights }) {
 
@@ -43,12 +45,10 @@ function FlightListItem({ flight }) {
                 <div>
                     <p id="number">FLIGHT {flight.id}</p>
                 </div>
-                <div id="duration" className="middle">
-                    <p>{flight.duration}</p>
-                </div>
-                <div id="details-link">
+                <FlightDuration duration={flight.duration} className={"middle"} />
+                <Button>
                     <Link to={`/flights/${flight.id}`} state={{ flightData: flight }} >Details</Link>
-                </div>
+                </Button>
             </div>
         </div>
     )
