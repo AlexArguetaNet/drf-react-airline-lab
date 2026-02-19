@@ -4,6 +4,7 @@ import Page from "../UI/Page/Page"
 import { useParams, useLocation } from "react-router-dom"
 import { fetchSingleFlight } from "../../utils/flightsAPI";
 import Details from "./Details";
+import Price from "./Price";
 
 function Flight() {
 
@@ -32,7 +33,7 @@ function Flight() {
                 flight && (
                     <div className="content">
                         <Details flight={flight} />
-                        {/* TODO: Create Price component */}
+                        <Price price={flight.price} />
                     </div>
                 )
             }

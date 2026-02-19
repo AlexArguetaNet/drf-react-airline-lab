@@ -1,0 +1,31 @@
+
+.flight-page #price {
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 15px 20px;
+    flex-grow: 1;
+}
+
+.flight-page #price > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.flight-page #price h2 {
+    margin-bottom: 15px;
+}
+
+.flight-page #price hr {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #415e8d;
+    background-color: #415e8d;
+    height: 1px;
+}
+
+.flight-page #price button {
+    width: 100%;
+    border-radius: 3px;
+}
