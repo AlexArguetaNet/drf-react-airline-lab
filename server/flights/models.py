@@ -4,6 +4,13 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 # Create your models here.
+class Aircraft(models.Model):
+    name = models.CharField(max_length=64)
+    capacity = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.id}: {self.name}"
+
 class Airport(models.Model):
     code = models.CharField(max_length=3)
     city = models.CharField(max_length=64)
@@ -17,6 +24,7 @@ class Flight(models.Model):
     duration = models.IntegerField()
     passengers = models.ManyToManyField(User, blank=True, related_name="flights")
     price = models.IntegerField()
+    aircraft = models.ForeignKey(Aircraft, on_delete=models.CASCADE, related_name="flights")
 
     def __str__(self):
         return f"Flight from {self.origin} to {self.destination}"

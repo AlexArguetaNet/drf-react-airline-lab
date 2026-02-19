@@ -11,7 +11,7 @@ class FLightsView(APIView):
     permission_classes = [AllowAny]
 
     def get(self, request):
-        flights = Flight.objects.select_related("origin", "destination").all()
+        flights = Flight.objects.select_related("origin", "destination", "aircraft").all()
         serialized_flights = FlightSerializer(flights, many=True)
 
         return Response(serialized_flights.data)
