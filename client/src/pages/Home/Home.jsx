@@ -1,5 +1,6 @@
 import Page from "../UI/Page/Page"
 import FlightList from "../../components/FlightLIst/FlightList"
+import SearchBar from "../../components/SearchBar/SearchBar"
 import { fetchFlights } from "../../utils/flightsAPI"
 import { useState, useEffect } from "react"
 
@@ -19,6 +20,7 @@ function Home() {
 
     return (
         <Page secondClassName={"home-page"}>
+            <SearchBar />
             {
                 flights ?  <FlightList flights={flights} />
                         : <p>No flights</p>
