@@ -34,7 +34,7 @@ function Flight() {
                     <div className="content">
                         <div>
                             <Details flight={flight} />
-                            <Price price={flight.price} />
+                            <Price flight={flight} />
                         </div>
                         <div>
                             <AircraftInfo img={aircraftImg} name={flight.aircraft.name} />
