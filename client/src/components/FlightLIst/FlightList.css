@@ -1,0 +1,70 @@
+
+.flight-list-item {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 25px 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 17px 0px;
+}
+
+.flight-list-item .row {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.flight-list-item .row:first-child {
+    margin-bottom: 7px;
+}
+
+.flight-list-item #graphic {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.flight-list-item .row > div {
+    width: 34%;
+}
+
+.flight-list-item .row .middle {
+    width: 300px;
+}
+
+.flight-list-item #ticket-icon {
+    width: 45px;
+    height: 45px;
+    color: var(--primary-color);
+}
+
+.flight-list-item .row .line {
+    font-size: 50px;
+    color: rgb(201, 201, 201);
+}
+
+.flight-list-item #airplane-icon {
+    width: 30px;
+    height: 30px;
+    color: rgb(111, 111, 146);
+}
+
+.flight-list-item #details-link a {
+    background-color: rgb(255, 123, 46);
+    color: #ffffff;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+.flight-list-item #number {
+    font-size: 19px;
+    color: gray;
+}
+
+.flight-list-item #price p {
+    font-weight: bold;
+    font-size: 25px;
+}
+

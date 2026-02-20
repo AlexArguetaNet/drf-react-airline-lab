@@ -1,0 +1,166 @@
+[
+{
+    "model": "flights.aircraft",
+    "pk": 1,
+    "fields": {
+        "name": "Embraer 175",
+        "capacity": 88
+    }
+},
+{
+    "model": "flights.aircraft",
+    "pk": 2,
+    "fields": {
+        "name": "Boeing 787-9 Dreamliner",
+        "capacity": 325
+    }
+},
+{
+    "model": "flights.aircraft",
+    "pk": 3,
+    "fields": {
+        "name": "Airbus A350-900",
+        "capacity": 300
+    }
+},
+{
+    "model": "flights.airport",
+    "pk": 1,
+    "fields": {
+        "code": "GSO",
+        "city": "Greensboro"
+    }
+},
+{
+    "model": "flights.airport",
+    "pk": 2,
+    "fields": {
+        "code": "CLT",
+        "city": "Charlotte"
+    }
+},
+{
+    "model": "flights.airport",
+    "pk": 3,
+    "fields": {
+        "code": "LGA",
+        "city": "New York"
+    }
+},
+{
+    "model": "flights.airport",
+    "pk": 4,
+    "fields": {
+        "code": "JFK",
+        "city": "New York"
+    }
+},
+{
+    "model": "flights.airport",
+    "pk": 5,
+    "fields": {
+        "code": "LHR",
+        "city": "London"
+    }
+},
+{
+    "model": "flights.airport",
+    "pk": 6,
+    "fields": {
+        "code": "NRT",
+        "city": "Tokyo"
+    }
+},
+{
+    "model": "flights.airport",
+    "pk": 7,
+    "fields": {
+        "code": "ATL",
+        "city": "Atlanta"
+    }
+},
+{
+    "model": "flights.airport",
+    "pk": 8,
+    "fields": {
+        "code": "DFW",
+        "city": "Dallas"
+    }
+},
+{
+    "model": "flights.airport",
+    "pk": 9,
+    "fields": {
+        "code": "CDG",
+        "city": "Paris"
+    }
+},
+{
+    "model": "flights.airport",
+    "pk": 10,
+    "fields": {
+        "code": "LAX",
+        "city": "Los Angeles"
+    }
+},
+{
+    "model": "flights.flight",
+    "pk": 1,
+    "fields": {
+        "origin": 1,
+        "destination": 3,
+        "duration": 70,
+        "price": 290,
+        "aircraft": 1,
+        "passengers": []
+    }
+},
+{
+    "model": "flights.flight",
+    "pk": 2,
+    "fields": {
+        "origin": 8,
+        "destination": 6,
+        "duration": 810,
+        "price": 1200,
+        "aircraft": 2,
+        "passengers": []
+    }
+},
+{
+    "model": "flights.flight",
+    "pk": 3,
+    "fields": {
+        "origin": 2,
+        "destination": 10,
+        "duration": 330,
+        "price": 530,
+        "aircraft": 3,
+        "passengers": []
+    }
+},
+{
+    "model": "flights.flight",
+    "pk": 4,
+    "fields": {
+        "origin": 9,
+        "destination": 5,
+        "duration": 80,
+        "price": 300,
+        "aircraft": 1,
+        "passengers": []
+    }
+},
+{
+    "model": "flights.flight",
+    "pk": 5,
+    "fields": {
+        "origin": 2,
+        "destination": 9,
+        "duration": 500,
+        "price": 550,
+        "aircraft": 2,
+        "passengers": []
+    }
+}
+]

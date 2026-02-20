@@ -1,0 +1,30 @@
+
+#orange-button input[type=submit] {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+#orange-button a {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+#orange-button button {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+#orange-button button:hover,
+#orange-button a:hover
+{
+    filter: brightness(1.2);
+}

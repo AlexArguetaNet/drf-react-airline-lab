@@ -21,8 +21,8 @@ form .text-input-container {
   width: 170px;
 }
 
-form input[type=submit] {
-  background-color: rgb(255, 156, 98);
+/* form input[type=submit] {
+  background-color: rgb(255, 123, 46);
   border-radius: 5px;
   width: 150px;
   margin: 10px auto;
@@ -30,7 +30,7 @@ form input[type=submit] {
   color: #ffffff;
   border: none;
   cursor: pointer;
-}
+} */
 
 form h2 {
   text-align: center;

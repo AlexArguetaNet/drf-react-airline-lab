@@ -4,6 +4,11 @@
   font-family: "Nunito";
 }
 
+:root {
+  --primary-color: #162F57;
+  --secondary-color: #f77948;
+}
+
 body {
   background-color: rgb(243, 243, 243);
 }
@@ -11,6 +16,7 @@ body {
 a { text-decoration: none; }
 button { cursor: pointer; border: none; }
 input { outline: none;}
+input[type=submit] { cursor: pointer; }
 
 .main {
   width: 55%;
