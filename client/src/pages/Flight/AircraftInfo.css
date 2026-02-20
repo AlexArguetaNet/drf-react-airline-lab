@@ -1,0 +1,35 @@
+
+#aircraft-info {
+    width: 50%;
+}
+
+#aircraft-info h2 {
+    margin-bottom: 15px;
+}
+
+#aircraft-img-container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 130px;
+}
+
+.flight-page img {
+    width: 180px;
+    padding: 10px;
+    margin: auto;
+}
+
+.flight-page #img-background {
+    background-color: rgb(241, 241, 241);
+    height: 130px;
+    display: flex;
+    align-items: center;
+}
+
+#aircraft-img-container p {
+  margin: 0px 10px;
+  text-align: center;
+}

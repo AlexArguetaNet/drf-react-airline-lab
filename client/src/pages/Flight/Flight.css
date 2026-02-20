@@ -1,6 +1,8 @@
 
-.flight-page .content {
+.flight-page .content > div {
     display: flex;
     align-items: center;
     gap: 50px;
+    margin-bottom: 30px;
 }
+
