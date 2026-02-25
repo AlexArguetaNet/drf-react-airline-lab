@@ -4,6 +4,7 @@ import { useAuth } from "../../context/AuthContext"
 import { logout } from "../../utils/authAPI"
 import DropDownMenu from "../DropDownMenu/DropDownMenu"
 import { SiFlyway } from "react-icons/si"
+import { LuSquareUserRound } from "react-icons/lu"
 
 function Navbar() {
 
@@ -31,7 +32,7 @@ function Navbar() {
           {
             user ? (
                       <div>
-                        <DropDownMenu title={user.username} options={menuOptions} />
+                        <DropDownMenu icon={<LuSquareUserRound />} title={user.username} options={menuOptions} />
                       </div>
                    )
                   :

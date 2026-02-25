@@ -1,14 +1,15 @@
 import "./DropDownMenu.css"
 import { useState } from "react"
+import { LuSquareUserRound } from "react-icons/lu"
 
-function DropDownMenu({ title, options }) {
+function DropDownMenu({ title, options, icon }) {
 
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className="dropdown-menu" onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
             <div className="dropdown-menu-button">
-                <p>{ title }</p>    
+                {icon}  
             </div>
 
             {/* Check if the mouse is hovering over the menu button */}

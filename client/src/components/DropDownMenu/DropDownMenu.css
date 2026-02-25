@@ -4,16 +4,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100px;
+    width: fit-content;
+    margin: 0px 25px;
 }
 
 .dropdown-menu-button {
     cursor: pointer;
     z-index: 9;
-    background-color: rgb(255, 148, 109);
-    color: white;
     text-align: center;
-    width: 100%;
     border-radius: 5px;
 }
 
@@ -21,7 +19,7 @@
     width: 130px; /* Change the width of the menu */
     position: absolute;
     z-index: 1000;
-    padding-top: 30px; /* Chane how far down the menu goes */
+    padding-top: 40px; /* Chane how far down the menu goes */
     border-radius: 5px;
     z-index: 9;
 }
