@@ -6,8 +6,11 @@ function SearchBar({ handleSearch, resetFlightList }) {
 
     const [query, setQuery] = useState("");
 
-    const handleClick = () => {
-        handleSearch(query);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (query != "") {
+            handleSearch(query);
+        }
     }
 
     const handleChange = (e) => {
@@ -22,12 +25,15 @@ function SearchBar({ handleSearch, resetFlightList }) {
     }
 
     return (
-        <div id="search-bar">
-            <input type="text" placeholder="Enter flight number" onChange={(e) => handleChange(e)} value={query} />
-            <button onClick={handleClick}>
-                <IoIosSearch />
-            </button>
-        </div>
+        
+        <form onSubmit={handleSubmit} id="search-bar">
+            <div>
+                <input type="text" placeholder="Enter flight number" onChange={(e) => handleChange(e)} value={query} />
+                <button onClick={handleSubmit}>
+                    <IoIosSearch />
+                </button>
+            </div>
+        </form>
     )
 }
 

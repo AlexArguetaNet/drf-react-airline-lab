@@ -1,3 +1,4 @@
+import "./Home.css"
 import Page from "../UI/Page/Page"
 import FlightList from "../../components/FlightLIst/FlightList"
 import SearchBar from "../../components/SearchBar/SearchBar"
@@ -41,6 +42,7 @@ function Home() {
     return (
         <Page secondClassName={"home-page"}>
             <SearchBar handleSearch={search} resetFlightList={resetFlightsList}/>
+            <h2>Available Flights</h2>
             {
                 flightsFiltered ?  displayList()
                         : <p>No flights</p>

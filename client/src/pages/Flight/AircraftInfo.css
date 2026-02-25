@@ -9,7 +9,7 @@
 
 #aircraft-img-container {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: var(--border-radius-main);
   display: flex;
   align-items: center;
   padding: 10px;
@@ -27,6 +27,7 @@
     height: 130px;
     display: flex;
     align-items: center;
+    border-radius: var(--border-radius-main);
 }
 
 #aircraft-img-container p {
