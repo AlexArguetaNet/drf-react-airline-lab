@@ -7,6 +7,7 @@
 :root {
   --primary-color: #162F57;
   --secondary-color: #f77948;
+  --border-radius-main: 5px;
 }
 
 body {

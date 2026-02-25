@@ -2,7 +2,7 @@
 .flight-page #price {
     color: #ffffff;
     background-color: var(--primary-color);
-    border-radius: 8px;
+    border-radius: var(--border-radius-main);
     padding: 15px 20px;
     flex-grow: 1;
 }
