@@ -9,11 +9,11 @@ function Home() {
 
     const [flights, setFlights] = useState([]);
     const [flightsFiltered, setFlightsFiltered] = useState([]);
-    const [query, setQuery] = useState("");
 
     useEffect(() => {
         const handleFetchFlights = async () => {
-            const flights = await fetchFlights();
+
+            const flights = await fetchFlights(); 
 
             setFlights(flights);
             setFlightsFiltered(flights);

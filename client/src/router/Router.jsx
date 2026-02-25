@@ -4,6 +4,8 @@ import About from "../pages/About/About"
 import Navbar from "../components/Navbar/Navbar"
 import Login from "../pages/Login/Login"
 import Flight from "../pages/Flight/Flight"
+import Profile from "../pages/Profile/Profile"
+import ProtectedRoute from "./ProtectedRoute"
 
 function Router() {
   return (
@@ -16,6 +18,7 @@ function Router() {
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
             <Route path="/flights/:flightId" element={<Flight />} />
+            <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
         </Routes>
     
     </BrowserRouter>

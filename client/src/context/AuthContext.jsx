@@ -7,16 +7,24 @@ export const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null);
     const [accessToken, setAccessToken] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
 
         const checkAuth = async () => {
 
-            const data = await refreshToken();
-            if (data && data.access) {
-                setAccessToken(data.access);
-                const userData = await getUser(data.access);
-                setUser(userData);
+            try {
+                const data = await refreshToken();
+                if (data && data.access) {
+                    setAccessToken(data.access);
+                    const userData = await getUser(data.access);
+                    setUser(userData);
+                }
+
+            } catch (err) {
+                console.log("Auth check failed", err);
+            } finally {
+                setIsLoading(false);
             }
 
         }
@@ -25,7 +33,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     return (
-        <AuthContext.Provider value={{ user, setUser, accessToken, setAccessToken }}>
+        <AuthContext.Provider value={{ user, setUser, accessToken, setAccessToken, isLoading }}>
             {children}
         </AuthContext.Provider>
     )

@@ -48,5 +48,5 @@ class UserFlights(APIView):
 
         serialized_flights = FlightSerializer(flights, many=True)
 
-        return Response({"flights": serialized_flights.data})
+        return Response(serialized_flights.data)
     

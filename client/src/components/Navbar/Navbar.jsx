@@ -5,14 +5,17 @@ import { logout } from "../../utils/authAPI"
 import DropDownMenu from "../DropDownMenu/DropDownMenu"
 import { SiFlyway } from "react-icons/si"
 import { LuSquareUserRound } from "react-icons/lu"
+import { useNavigate } from "react-router-dom"
 
 function Navbar() {
 
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   // Function to logout a user
   const handleLogout = async () => {
     await logout();
+    navigate("/");
     window.location.reload();
   }
 

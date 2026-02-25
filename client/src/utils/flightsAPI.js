@@ -6,7 +6,7 @@ import PlaneImg3 from "../assets/images/plane3.png"
 const API_PREFIX = import.meta.env.VITE_API_PREFIX;
 
 export const fetchFlights = async () => {
-    
+
     try {
 
         const res = await axios.get(`${API_PREFIX}/api/flights/all`);
@@ -44,19 +44,39 @@ export const fetchSingleFlight = async (flightId) => {
 
 export const getAircraftImg = (flight) => {
         
-        if (!flight) {
-            return null;
-        }
-
-        const aircraftId = flight.aircraft.id;
-
-        switch (aircraftId) {
-            case 1:
-                return PlaneImg1;
-            case 2:
-                return PlaneImg2;
-            case 3:
-                return PlaneImg3;
-        }
-
+    if (!flight) {
+        return null;
     }
+
+    const aircraftId = flight.aircraft.id;
+
+    switch (aircraftId) {
+        case 1:
+            return PlaneImg1;
+        case 2:
+            return PlaneImg2;
+        case 3:
+            return PlaneImg3;
+    }
+
+}
+
+export const fetchUserFlights = async (accessToken) => {
+
+    try {
+
+        const res = await axios.get(`${API_PREFIX}/api/flights/user/all`, 
+            {headers: { Authorization: `Bearer ${accessToken}`}},
+            { withCredentials: true }            
+        );
+
+        const flights = await res.data;
+
+        return flights;
+        
+    } catch (err) {
+        console.log(err.message);
+        return null;
+    }
+
+}
