@@ -162,5 +162,29 @@
         "aircraft": 2,
         "passengers": []
     }
+},
+{
+    "model": "flights.flight",
+    "pk": 6,
+    "fields": {
+        "origin": 7,
+        "destination": 1,
+        "duration": 30,
+        "price": 220,
+        "aircraft": 1,
+        "passengers": []
+    }
+},
+{
+    "model": "flights.flight",
+    "pk": 7,
+    "fields": {
+        "origin": 7,
+        "destination": 10,
+        "duration": 500,
+        "price": 650,
+        "aircraft": 3,
+        "passengers": []
+    }
 }
 ]
